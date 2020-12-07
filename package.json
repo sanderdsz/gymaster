@@ -1,0 +1,27 @@
+{
+  "name": "gymaster",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanderdsz/gymaster.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanderdsz/gymaster/issues"
+  },
+  "homepage": "https://github.com/sanderdsz/gymaster#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
