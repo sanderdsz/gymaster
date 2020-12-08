@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #2E3440;
+    --secondary-color:  #D8DEE9;
+    --dark1: #3B4252;
+    --dark2: #434C5E;
+    --dark3: #4C566A;
+    --light1: #E5E9F0;
+    --light2: #ECEFF4;
+    --frost1: #8FBCBB;
+    --frost2: #88C0D0;
+    --frost3: #81A1C1;
+    --frost4: #5E81AC;
+    --aurora1: #BF616A;
+    --aurora2: #D08770;
+    --aurora3: #EBCB8B;
+    --aurora4: #A3BE8C;
+    --aurora5: #B48EAD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--secondary-color);
+}
+
+header {
+    background-color: var(--dark1);
+    width: 100%;
+    padding: 32px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.links {
+    font-size: 22px;
+}
+
+.links a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    position: relative;
+}
+
+.links a.active {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.links a:hover {
+    color: var(--light2);
+    transition: 700ms ease-in-out;
+}
+
+.links a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+}
+
+.links a:hover::after {
+    width: 100%;
+    transition: width 700ms ease-in-out;
+}
+
+.links a + a {
+    margin-left: 32px;
+}
+
+.card {
+    background-color: var(--dark1);
+    width: 800px;
+    height: 400px;
+    margin: 45px auto;
+}
