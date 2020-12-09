@@ -1,0 +1,13 @@
+{
+  "instructors": [
+    {
+      "id": 1,
+      "avatar_url": "https://google.com",
+      "name": "Sander Zuchinalli",
+      "birth": "2020-12-09",
+      "gender": "M",
+      "services": "dae",
+      "created_at": 1607542508101
+    }
+  ]
+}
