@@ -4,10 +4,10 @@
       "id": 1,
       "avatar_url": "https://google.com",
       "name": "Sander Zuchinalli",
-      "birth": "2020-12-09",
+      "birth": 1607472000000,
       "gender": "M",
-      "services": "dae",
-      "created_at": 1607542508101
+      "services": "Power Lift",
+      "created_at": 1607560332664
     }
   ]
 }

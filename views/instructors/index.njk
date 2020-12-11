@@ -1,0 +1,39 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <div class="card">
+        <section
+            class="avatar" 
+            style="background: url(https://source.unsplash.com/collection/3465564/300x300) no-repeat center center / cover">
+        </section>
+
+        <section class="details">
+            <h3>Detalhes</h3>
+            <div class="item">
+                <div class="item-title">Instructor</div>
+                <div class="item-description">Sander Zuchinalli</div>
+            </div>
+            <div class="item">
+                <div class="item-title">Age</div>
+                <div class="item-description">29</div>
+            </div>
+            <div class="item">
+                <div class="item-title">Gender</div>
+                <div class="item-description">Male</div>
+            </div>
+            <div class="item">
+                <div class="item-title">Sports</div>
+                <div>
+                    <span>Weight-lift</span>
+                    <span>Crossfit</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-title">Since</div>
+                <div class="item-description">01/01/2020</div>
+            </div>
+        </section>
+    </div>
+
+{% endblock content %}

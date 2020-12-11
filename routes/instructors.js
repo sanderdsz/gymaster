@@ -1,6 +1,26 @@
 const fs = require('fs')
 const data = require("../data.json")
 
+exports.show = function(req, res) {
+    const { id } = req.params
+    const foundInstructor = data.instructors.find(function(instructor) {
+        return instructor.id == id
+    })
+    if (!foundInstructor) { 
+        return res.send("Instructor not found.")
+    }
+
+    const instructor = {
+        ...foundInstructor,
+        age: "",
+        gender: "",
+        services: "",
+        created_at: "",
+    }
+
+    return res.render('instructors/show/index', { instructor: foundInstructor })
+}
+
 exports.post = function(req, res) {
     const keys = Object.keys(req.body)
     /* Simple validation of blank input fields */
