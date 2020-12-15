@@ -3,11 +3,11 @@
     {
       "id": 1,
       "avatar_url": "https://google.com",
-      "name": "Sander Zuchinalli",
-      "birth": 1607472000000,
+      "name": "Sander",
+      "birth": 716169600000,
       "gender": "M",
-      "services": "Power Lift",
-      "created_at": 1607560332664
+      "services": "Running",
+      "created_at": 1607992261244
     }
   ]
 }

@@ -1,5 +1,7 @@
 const fs = require('fs')
 const data = require("../data.json")
+const { age } = require("../utils/utils")
+
 
 exports.show = function(req, res) {
     const { id } = req.params
@@ -12,14 +14,13 @@ exports.show = function(req, res) {
 
     const instructor = {
         ...foundInstructor,
-        age: "",
-        gender: "",
-        services: "",
-        created_at: "",
+        age: age(foundInstructor.birth),
+        services: foundInstructor.services.split(","),
+        created_at: new Intl.DateTimeFormat("en-US").format(foundInstructor.created_at),
     }
 
-    return res.render('instructors/show/index', { instructor: foundInstructor })
-}
+    return res.render('instructors/show/index', { instructor: instructor })
+} 
 
 exports.post = function(req, res) {
     const keys = Object.keys(req.body)
@@ -42,7 +43,7 @@ exports.post = function(req, res) {
         avatar_url,
         name,
         birth,
-        gender,
+        gender, 
         services,
         created_at
     })
