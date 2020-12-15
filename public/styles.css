@@ -168,13 +168,21 @@ input::placeholder {
     color: #4C566A 50%;
 }
 
-button[type="submit"] {
+button[type="submit"],
+a.button {
     padding: 8px 32px;
     color: var(--primary-color);
     background-color: var(--frost1);
     border-radius: 4px;
     margin-top: 24px;
     width: 100%;
+}
+
+a.button {
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
 }
 
 .details .item .gender-radio {
