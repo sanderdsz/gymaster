@@ -29,25 +29,27 @@
 </div>
 <div class="item">
     <div>Gender</div>
-    <div class="gender-radio">
-        <input 
-        type="radio" 
-        name="gender" 
-        value="M"
-        {% if instructor.gender == 'M' %}
-            checked
-        {% endif %}>
-        Men
-    </div>
-    <div class="gender-radio">
-        <input 
-        type="radio" 
-        name="gender" 
-        value="F"
-        {% if instructor.gender == 'F' %}
-            checked
-        {% endif %}>
-        Woman
+    <div>
+        <span>
+            <input 
+            type="radio" 
+            name="gender" 
+            value="M"
+            {% if instructor.gender == 'M' %}
+                checked
+            {% endif %}>
+            Men
+        </span>
+        <span>
+            <input 
+            type="radio" 
+            name="gender" 
+            value="F"
+            {% if instructor.gender == 'F' %}
+                checked
+            {% endif %}>
+            Woman
+        </span>
     </div>
 </div>
 <div class="item">
