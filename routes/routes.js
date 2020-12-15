@@ -13,9 +13,7 @@ routes.get('/instructors/create', function(req, res){
     return res.render('instructors/create/index')
 })
 routes.get('/instructors/:id', instructors.show)
-routes.get('/instructors/:id/edit',function(req, res){
-    return res.render('instructors/edit/index')
-})
+routes.get('/instructors/:id/edit', instructors.edit)
 routes.post('/instructors', instructors.post) 
 
 routes.get('/members', function(req, res) {
