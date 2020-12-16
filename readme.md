@@ -1,6 +1,10 @@
 <h3 align="center">
-    <b>Gymaster, a simple minimalistic crud prototype for gym management.</b> 
+    <b>Gymaster, a simple minimalistic crud prototype for gym management.</b>
 </h3>
+
+<p align="center">
+    <a href="https://168.138.149.16:3000/">Live demo</a>
+</p>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/sandersz/">
@@ -17,7 +21,7 @@
 ## :computer: Web
 
 <h1 align="center">
-    <img alt="Web" src=".github/preview.png" width="650px">
+    <img alt="Web" src=".github/preview.PNG" width="700px">
 </h1>
 
 ## :bookmark: About
