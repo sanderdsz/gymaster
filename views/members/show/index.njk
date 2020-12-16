@@ -3,36 +3,36 @@
 {% block content %}
 
     <div class="card">
-        <section class="avatar" style="background: url({{instructor.avatar_url}}) no-repeat center center / cover"></section>
+        <section class="avatar" style="background: url({{member.avatar_url}}) no-repeat center center / cover"></section>
         <section class="details">
-            <h3>Instructor Details</h3>
+            <h3>Member Details</h3>
             <div class="item">
-                <div class="item-title">Instructor</div>
-                <div class="item-description">{{ instructor.name }}</div>
+                <div class="item-title">member</div>
+                <div class="item-description">{{ member.name }}</div>
             </div>
             <div class="item">
                 <div class="item-title">Age</div>
-                <div class="item-description">{{ instructor.age }}</div>
+                <div class="item-description">{{ member.age }}</div>
             </div>
             <div class="item">
                 <div class="item-title">Gender</div>
-                <div class="item-description">{{ "Masculino" if instructor.gender == "M" else "Feminino"}}</div>
+                <div class="item-description">{{ "Masculino" if member.gender == "M" else "Feminino"}}</div>
             </div>
             
             <div class="item">
                 <div class="item-title">Sports</div>
                 <div> 
-                    {% for service in instructor.services %}
+                    {% for service in member.services %}
                         <span>{{service}}</span>
                     {% endfor %}
                 </div>
             </div>
             <div class="item">
                 <div class="item-title">Since</div>
-                <div class="item-description">{{ instructor.created_at }}</div>
+                <div class="item-description">{{ member.created_at }}</div>
             </div>
 
-            <a class="button" href="/instructors/{{instructor.id}}/edit">Editar</a>
+            <a class="button" href="/members/{{member.id}}/edit">Editar</a>
             
         </section>
     </div>

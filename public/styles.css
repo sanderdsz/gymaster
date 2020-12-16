@@ -56,7 +56,7 @@ header {
     bottom: -4px;
 }
 
-/* Pseudo-elemento */
+/* Pseudo-element */
 
 .links a:hover::after {
     width: 100%;

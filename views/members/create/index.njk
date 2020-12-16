@@ -2,15 +2,15 @@
 
 {% block content %}
     
-    <form class="card" method="POST" action="/instructors">
+    <form class="card" method="POST" action="/members">
         <section 
             class="avatar" 
             style="background: url(https://freesvg.org/img/generic-avatar.png) no-repeat center center / cover">
         </section>
         <section class="details">
-            <h3>Create Instructor</h3>
+            <h3>Create Member</h3>
             
-            {% include 'instructors/fields.njk' %}
+            {% include 'members/fields.njk' %}
             
         </section>
     </form>
