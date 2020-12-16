@@ -7,8 +7,12 @@
         <section class="details">
             <h3>Member Details</h3>
             <div class="item">
-                <div class="item-title">member</div>
+                <div class="item-title">Member</div>
                 <div class="item-description">{{ member.name }}</div>
+            </div>
+            <div class="item">
+                <div class="item-title">E-mail</div>
+                <div class="item-description">{{ member.email }}</div>
             </div>
             <div class="item">
                 <div class="item-title">Age</div>
@@ -18,14 +22,17 @@
                 <div class="item-title">Gender</div>
                 <div class="item-description">{{ "Masculino" if member.gender == "M" else "Feminino"}}</div>
             </div>
-            
             <div class="item">
-                <div class="item-title">Sports</div>
-                <div> 
-                    {% for service in member.services %}
-                        <span>{{service}}</span>
-                    {% endfor %}
-                </div>
+                <div class="item-title">Blood type</div>
+                <div class="item-description">{{ member.blood }}</div>
+            </div>
+            <div class="item">
+                <div class="item-title">Weight (kg)</div>
+                <div class="item-description">{{ member.weight }}</div>
+            </div>
+            <div class="item">
+                <div class="item-title">Height (cm)</div>
+                <div class="item-description">{{ member.height }}</div>
             </div>
             <div class="item">
                 <div class="item-title">Since</div>

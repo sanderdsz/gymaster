@@ -3,22 +3,27 @@
 {% block content %}
 
 <div class="card table-container">
+    <a href="/members/create">New</a>
     <table width='100%'>
         <thead>
             <tr>
-                <th>Instructor</th>
-                <th>Attendance</th>
+                <th>Member</th>
+                <th>E-mail</th>
+                <th>Weight</th>
+                <th>Height</th>
                 <th>Actions</th>
             </tr>
             <tbody>
-                {% for instructor in instructors %}
+                {% for member in members %}
                 <tr>
                     <td>
-                        <span style="background-image: url({{instructor.avatar_url}})"></span>
-                        {{ instructor.name }}
+                        <span style="background-image: url({{member.avatar_url}})"></span>
+                        {{ member.name }}
                     </td>
-                    <td>{{ instructor.services }}</td>
-                    <td><a href="/instructors/{{instructor.id}}">Show</a></td>
+                    <td>{{ member.email }}</td>
+                    <td>{{ member.weight }} kg</td>
+                    <td>{{ member.height }} cm</td>
+                    <td><a href="/members/{{member.id}}">Show</a></td>
                 </tr>
                 {% endfor %}
             </tbody>

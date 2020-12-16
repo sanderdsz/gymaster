@@ -3,7 +3,7 @@ const data = require("../data.json")
 const { age, date } = require("../utils/utils")
 
 exports.index = function(req, res) {
-    return res.render('members/index', /*{ members: data.members }*/)
+    return res.render('members/index', { members: data.members })
 }
 
 exports.show = function(req, res) {
@@ -32,25 +32,26 @@ exports.post = function(req, res) {
             return res.send('Please, fill all fields.')
         }
     }
-    
-    let {avatar_url, birth, name, gender} = req.body
 
     birth = Date.parse(req.body.birth)
     const created_at = req.body.created_at = Date.now()
-    const id = req.body.id = Number(data.members.length + 1)
 
+    let id = 1
+    const lastMember = data.members[data.members.length - 1]
+    if (lastMember) {
+        id = lastMember.id + 1
+    }
+    
     /* Persistence */
     data.members.push({
+        ...req.body,
         id,
-        avatar_url,
-        name,
         birth,
-        gender, 
         created_at
     })
 
     fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
-        if (err) {
+        if (err) { 
             return res.send("Write file error.")
         }
         return res.redirect("/members")
